@@ -1,21 +1,7 @@
 <!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
+Author: Gathila
 -->
 <!DOCTYPE HTML>
-
-<?php
-function display()
-{
-    echo "hello ".$_POST["studentname"];
-}
-if(isset($_POST['submit']))
-{
-   display();
-} 
-?>
 
 <html>
 <head>
@@ -24,6 +10,8 @@ if(isset($_POST['submit']))
 <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!--[if lt IE 9]>
      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -43,7 +31,7 @@ if(isset($_POST['submit']))
 <div class="container">
 	<div class="row header">
 		<div class="logo navbar-left">
-			<h1><a href="index.html">Learner</a></h1>
+			<h1><a href="index.php">Learner</a></h1>
 		</div>
 		<div class="h_search navbar-right">
 			<form>
@@ -67,7 +55,7 @@ if(isset($_POST['submit']))
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li><a href="index.html">Home</a></li>
+		        <li><a href="index.php">Home</a></li>
 		        <li><a href="technology.html">Technologies</a></li>
 		        <li><a href="about.html">About</a></li>
 		        <li><a href="blog.html">Blog</a></li>
@@ -99,21 +87,29 @@ if(isset($_POST['submit']))
 				<div class="col-md-8">
 				  <div class="contact-form">
 				  	<h2>Add details</h2>
-					    <form method="post" action="contact-post.html">
+					    <form method="post" action="JsonAdder.php" enctype="multipart/form-data">
 					    	<div>
 						    	<span>School Name</span>
-						    	<span><input type="username" class="form-control" id="userName"></span>
+						    	<span><input type="username" name="schoolname" class="form-control" id="schoolname"></span>
 						    </div>
 						    <div>
 						    	<span>Address</span>
-						    	<span><input type="email" class="form-control" id="inputEmail3"></span>
+						    	<span><input type="username" name="address" class="form-control" id="address"></span>
 						    </div>
 						    <div>
-						    	<span></span>
-						    	<span><textarea name="userMsg"> </textarea></span>
+						    	<span>Telephone Number</span>
+						    	<span><input type="username" name="tp" class="form-control" id="tp"></span>
+						    </div>
+							<div>
+						    	<span>Moto</span>
+						    	<span><input type="username" name="moto" class="form-control" id="moto"></span>
+						    </div>
+							<div>
+						    	<span>Logo</span>
+						    	<span><input type="file" name="logo" id="logo"></span>
 						    </div>
 						   <div>
-						   		<label class="fa-btn btn-1 btn-1e"><input type="submit" value="submit us"></label>
+						   		<label class="fa-btn btn-1 btn-1e"><input type="submit" value="submit"></label>
 						  </div>
 					    </form>
 				    </div>
@@ -131,5 +127,6 @@ if(isset($_POST['submit']))
 		</div>
 	</div>
 </div>
+
 </body>
 </html>

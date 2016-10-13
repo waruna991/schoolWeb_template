@@ -7,10 +7,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 
 <?php
-$myfile = fopen("data.txt", "r") or die("Unable to open file!");
-
-$home = fread($myfile,filesize("data.txt"));;
-fclose($myfile);
+$str = file_get_contents('SchoolRecords.json');
+$json = json_decode($str, true); // decode the JSON into an associative array	SchoolName
+echo $json;
+$schoolname	= $json['daily']['data'][0]['temperatureMin'];
+//$schoolname = "Home";
 ?>
 <html>
 <head>
@@ -19,6 +20,8 @@ fclose($myfile);
 <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!--[if lt IE 9]>
      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -101,7 +104,7 @@ fclose($myfile);
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="index.php"><?php echo $home ;?></a></li>
+		        <li class="active"><a href="index.php"><?php echo $schoolname ;?></a></li>
 		        <li><a href="technology.php">Technologies</a></li>
 		        <li><a href="about.php">About</a></li>
 		        <li><a href="blog.php">Blog</a></li>
