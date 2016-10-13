@@ -73,6 +73,7 @@ fclose($myfile);
 <div class="container">
 	<div class="row header">
 		<div class="logo navbar-left">
+			<h1><a href="Configure.html">Configure </a></h1>
 			<h1><a href="index.html">Learner </a></h1>
 		</div>
 		<div class="h_search navbar-right">
