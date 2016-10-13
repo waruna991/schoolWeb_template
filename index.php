@@ -100,11 +100,11 @@ fclose($myfile);
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="index.html"><?php echo $home ;?></a></li>
-		        <li><a href="technology.html">Technologies</a></li>
-		        <li><a href="about.html">About</a></li>
-		        <li><a href="blog.html">Blog</a></li>
-		        <li><a href="contact.html">Contact</a></li>
+		        <li class="active"><a href="index.php"><?php echo $home ;?></a></li>
+		        <li><a href="technology.php">Technologies</a></li>
+		        <li><a href="about.php">About</a></li>
+		        <li><a href="blog.php">Blog</a></li>
+		        <li><a href="contact.php">Contact</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		    <!-- start soc_icons -->
